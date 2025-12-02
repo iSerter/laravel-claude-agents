@@ -119,20 +119,20 @@ Successfully created a comprehensive collection of Claude Code subagents and ski
 ```
 laravel-claude-agents/
 ├── .claude/
-│   └── agents/
-│       ├── eloquent-specialist.md
-│       ├── laravel-api-developer.md
-│       ├── laravel-architect.md
-│       ├── laravel-performance-optimizer.md
-│       ├── laravel-security-auditor.md
-│       └── laravel-testing-expert.md
-├── skills/
-│   ├── api-resource-patterns/
-│   │   └── SKILL.md
-│   ├── eloquent-best-practices/
-│   │   └── SKILL.md
-│   └── laravel-tdd/
-│       └── SKILL.md
+│   ├── agents/
+│   │   ├── eloquent-specialist.md
+│   │   ├── laravel-api-developer.md
+│   │   ├── laravel-architect.md
+│   │   ├── laravel-performance-optimizer.md
+│   │   ├── laravel-security-auditor.md
+│   │   └── laravel-testing-expert.md
+│   └── skills/
+│       ├── api-resource-patterns/
+│       │   └── SKILL.md
+│       ├── eloquent-best-practices/
+│       │   └── SKILL.md
+│       └── laravel-tdd/
+│           └── SKILL.md
 ├── CONTRIBUTING.md
 ├── EXAMPLES.md
 ├── README.md
@@ -151,12 +151,10 @@ laravel-claude-agents/
 2. **Copy to your Laravel project:**
    ```bash
    # For project-specific use
-   cp -r .claude/agents /path/to/your/laravel-project/.claude/
-   cp -r skills /path/to/your/laravel-project/.claude/
+   cp -r .claude /path/to/your/laravel-project/
    
    # For global use (all projects)
-   cp -r .claude/agents ~/.claude/
-   cp -r skills ~/.claude/
+   cp -r .claude ~/.claude/
    ```
 
 ### Usage

@@ -89,7 +89,7 @@ Choose appropriate tools based on agent role:
 
 ### Skill Structure
 
-Each skill should be in `skills/skill-name/SKILL.md`:
+Each skill should be in `.claude/skills/skill-name/SKILL.md`:
 
 ```markdown
 ---
@@ -172,11 +172,11 @@ vim .claude/agents/your-agent-name.md
 **For Skills:**
 ```bash
 # Create the skill directory and file
-mkdir -p skills/your-skill-name
-touch skills/your-skill-name/SKILL.md
+mkdir -p .claude/skills/your-skill-name
+touch .claude/skills/your-skill-name/SKILL.md
 
 # Edit the skill
-vim skills/your-skill-name/SKILL.md
+vim .claude/skills/your-skill-name/SKILL.md
 ```
 
 ### 4. Test Your Changes
@@ -196,7 +196,7 @@ cd /path/to/test-laravel-project
 # Check for markdown issues
 mdl .claude/agents/your-agent-name.md
 # or
-mdl skills/your-skill-name/SKILL.md
+mdl .claude/skills/your-skill-name/SKILL.md
 ```
 
 ### 5. Update Documentation

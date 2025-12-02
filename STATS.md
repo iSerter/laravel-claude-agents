@@ -72,7 +72,7 @@ Located in `.claude/agents/`:
 **Total Subagent Content:** ~138 KB
 
 ### Skills (5 total)
-Located in `skills/`:
+Located in `.claude/skills/`:
 
 **Development Workflows (3):**
 1. **laravel-tdd/** - 3.3 KB

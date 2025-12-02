@@ -28,18 +28,18 @@ Specialized AI agents for specific Laravel development tasks:
 - **[laravel-security-auditor](/.claude/agents/laravel-security-auditor.md)** - Security best practices and vulnerability detection
 - **[laravel-documentation-engineer](/.claude/agents/laravel-documentation-engineer.md)** - API documentation and technical guides
 
-### 🎯 Skills (`skills/`)
+### 🎯 Skills (`.claude/skills/`)
 
 Reusable workflows and best practices:
 
 **Development Workflows:**
-- **[laravel-tdd](/skills/laravel-tdd/)** - Test-driven development for Laravel with Pest PHP
-- **[brainstorming](/skills/brainstorming/)** - Collaborative feature design and planning for Laravel
-- **[systematic-debugging](/skills/systematic-debugging/)** - Systematic debugging process for Laravel applications
+- **[laravel-tdd](/.claude/skills/laravel-tdd/)** - Test-driven development for Laravel with Pest PHP
+- **[brainstorming](/.claude/skills/brainstorming/)** - Collaborative feature design and planning for Laravel
+- **[systematic-debugging](/.claude/skills/systematic-debugging/)** - Systematic debugging process for Laravel applications
 
 **Best Practices:**
-- **[eloquent-best-practices](/skills/eloquent-best-practices/)** - Eloquent ORM patterns and optimization
-- **[api-resource-patterns](/skills/api-resource-patterns/)** - API resource and collection best practices
+- **[eloquent-best-practices](/.claude/skills/eloquent-best-practices/)** - Eloquent ORM patterns and optimization
+- **[api-resource-patterns](/.claude/skills/api-resource-patterns/)** - API resource and collection best practices
 
 ## 🚀 Quick Start
 
@@ -62,10 +62,10 @@ Reusable workflows and best practices:
 3. **Copy skills to your project or global directory:**
    ```bash
    # For project-specific skills
-   cp -r skills /path/to/your/laravel-project/.claude/
+   cp -r .claude/skills /path/to/your/laravel-project/.claude/
 
    # For global skills
-   cp -r skills ~/.claude/
+   cp -r .claude/skills ~/.claude/
    ```
 
 ### Usage with Claude Code
@@ -264,7 +264,7 @@ Edit the files in `.claude/agents/` to customize behavior, add tools, or adjust 
 
 ### Adding Skills
 
-1. Create a new directory in `skills/`
+1. Create a new directory in `.claude/skills/`
 2. Add a `SKILL.md` file with YAML frontmatter
 3. Document the workflow or pattern
 4. Include code examples and checklists
