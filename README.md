@@ -10,18 +10,34 @@ A comprehensive collection of specialized Claude Code subagents and skills desig
 
 Specialized AI agents for specific Laravel development tasks:
 
+**Development:**
 - **[laravel-architect](/.claude/agents/laravel-architect.md)** - Application architecture and design patterns expert
 - **[eloquent-specialist](/.claude/agents/eloquent-specialist.md)** - Database design, models, relationships, and query optimization
 - **[laravel-api-developer](/.claude/agents/laravel-api-developer.md)** - RESTful API development with Sanctum/Passport
+
+**Quality & Testing:**
 - **[laravel-testing-expert](/.claude/agents/laravel-testing-expert.md)** - Pest PHP, PHPUnit, and comprehensive testing strategies
-- **[laravel-security-auditor](/.claude/agents/laravel-security-auditor.md)** - Security best practices and vulnerability detection
+- **[laravel-code-reviewer](/.claude/agents/laravel-code-reviewer.md)** - Code quality, Laravel best practices, and PR reviews
+- **[laravel-architecture-reviewer](/.claude/agents/laravel-architecture-reviewer.md)** - Architecture evaluation and design validation
+
+**Debugging & Performance:**
+- **[laravel-debugger](/.claude/agents/laravel-debugger.md)** - Systematic debugging and issue diagnosis
 - **[laravel-performance-optimizer](/.claude/agents/laravel-performance-optimizer.md)** - Performance optimization, caching, and scaling
+
+**Security & Documentation:**
+- **[laravel-security-auditor](/.claude/agents/laravel-security-auditor.md)** - Security best practices and vulnerability detection
+- **[laravel-documentation-engineer](/.claude/agents/laravel-documentation-engineer.md)** - API documentation and technical guides
 
 ### 🎯 Skills (`skills/`)
 
 Reusable workflows and best practices:
 
+**Development Workflows:**
 - **[laravel-tdd](/skills/laravel-tdd/)** - Test-driven development for Laravel with Pest PHP
+- **[brainstorming](/skills/brainstorming/)** - Collaborative feature design and planning for Laravel
+- **[systematic-debugging](/skills/systematic-debugging/)** - Systematic debugging process for Laravel applications
+
+**Best Practices:**
 - **[eloquent-best-practices](/skills/eloquent-best-practices/)** - Eloquent ORM patterns and optimization
 - **[api-resource-patterns](/skills/api-resource-patterns/)** - API resource and collection best practices
 
@@ -106,13 +122,29 @@ Once installed, Claude Code automatically detects and loads the subagents. You c
 - Tests APIs and authentication
 - Achieves high code coverage
 
-### Laravel Security Auditor
-**When to invoke:** Security reviews, vulnerability detection
-- Audits code for OWASP Top 10 vulnerabilities
-- Reviews authentication and authorization
-- Checks input validation and sanitization
-- Verifies CSRF and XSS protection
-- Ensures secure file uploads
+### Laravel Code Reviewer
+**When to invoke:** Code reviews, pull requests, quality assurance
+- Reviews code quality and Laravel conventions
+- Identifies security vulnerabilities
+- Checks performance issues
+- Validates best practices
+- Provides actionable feedback
+
+### Laravel Architecture Reviewer
+**When to invoke:** Architecture evaluation, design validation, technical debt
+- Evaluates system design decisions
+- Assesses scalability architecture
+- Reviews design pattern usage
+- Identifies architectural technical debt
+- Validates Laravel ecosystem integration
+
+### Laravel Debugger
+**When to invoke:** Debugging issues, error analysis, root cause identification
+- Diagnoses Laravel-specific problems
+- Analyzes error logs and stack traces
+- Debugs Eloquent queries and relationships
+- Identifies performance bottlenecks
+- Resolves package conflicts
 
 ### Laravel Performance Optimizer
 **When to invoke:** Performance issues, optimization, scaling
@@ -121,6 +153,22 @@ Once installed, Claude Code automatically detects and loads the subagents. You c
 - Implements caching strategies
 - Configures queue systems
 - Sets up Laravel Octane
+
+### Laravel Security Auditor
+**When to invoke:** Security reviews, vulnerability detection
+- Audits code for OWASP Top 10 vulnerabilities
+- Reviews authentication and authorization
+- Checks input validation and sanitization
+- Verifies CSRF and XSS protection
+- Ensures secure file uploads
+
+### Laravel Documentation Engineer
+**When to invoke:** Documentation creation, API docs, technical guides
+- Creates comprehensive project documentation
+- Documents API endpoints with examples
+- Writes setup and deployment guides
+- Documents Laravel configurations
+- Maintains changelog and migration guides
 
 ## 🎯 Skills Details
 
@@ -133,6 +181,26 @@ Test-driven development workflow specifically for Laravel applications using Pes
 - Database testing with factories
 - API testing examples
 - Authorization and validation testing
+
+### Brainstorming Laravel
+Collaborative feature design and planning specifically for Laravel applications.
+
+**Key Features:**
+- Laravel-specific design questions
+- Multiple approach exploration
+- Incremental validation
+- Database schema design
+- API and service design patterns
+
+### Systematic Debugging Laravel
+Systematic debugging process tailored for Laravel applications.
+
+**Key Features:**
+- Four-phase debugging process
+- Laravel-specific debug techniques
+- Eloquent and route debugging
+- Queue and event debugging
+- Root cause identification
 
 ### Eloquent Best Practices
 Patterns and practices for efficient Eloquent ORM usage.
