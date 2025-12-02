@@ -596,15 +596,17 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
+        extensions: mbstring, xml, ctype, json, bcmath, pdo_mysql
+        coverage: xdebug
         
     - name: Install Dependencies
-      run: composer install
+      run: composer install --prefer-dist --no-progress
       
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
