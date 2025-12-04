@@ -1,0 +1,30 @@
+{
+    "name": "iserter/laravel-claude-agents",
+    "description": "A collection of Claude AI agents and skills specifically designed for Laravel development",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iSerter",
+            "email": "your-email@example.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ISerter\\LaravelClaudeAgents\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ISerter\\LaravelClaudeAgents\\LaravelClaudeAgentsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

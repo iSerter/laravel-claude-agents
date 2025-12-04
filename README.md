@@ -2,75 +2,102 @@
 
 > Awesome Claude Code Subagents and Skills for Laravel Development
 
-A comprehensive collection of specialized Claude Code subagents and skills designed specifically for Laravel framework development. These tools help you build high-quality Laravel applications more efficiently by delegating tasks to specialized AI agents with deep Laravel expertise.
+A comprehensive collection of specialized Claude Code subagents and skills designed specifically for Laravel framework development. Install this package via Composer and publish the agents and skills to your project with a single artisan command.
 
-## 📚 What's Included
+## Features
 
-### 🤖 Subagents (`.claude/agents/`)
-
-Specialized AI agents for specific Laravel development tasks:
+### 10 Laravel-Specific Agents
 
 **Development:**
-- **[laravel-architect](/.claude/agents/laravel-architect.md)** - Application architecture and design patterns expert
-- **[eloquent-specialist](/.claude/agents/eloquent-specialist.md)** - Database design, models, relationships, and query optimization
-- **[laravel-api-developer](/.claude/agents/laravel-api-developer.md)** - RESTful API development with Sanctum/Passport
+- **laravel-architect** - Application architecture and design patterns expert
+- **eloquent-specialist** - Database design, models, relationships, and query optimization
+- **laravel-api-developer** - RESTful API development with Sanctum/Passport
 
 **Quality & Testing:**
-- **[laravel-testing-expert](/.claude/agents/laravel-testing-expert.md)** - Pest PHP, PHPUnit, and comprehensive testing strategies
-- **[laravel-code-reviewer](/.claude/agents/laravel-code-reviewer.md)** - Code quality, Laravel best practices, and PR reviews
-- **[laravel-architecture-reviewer](/.claude/agents/laravel-architecture-reviewer.md)** - Architecture evaluation and design validation
+- **laravel-testing-expert** - Pest PHP, PHPUnit, and comprehensive testing strategies
+- **laravel-code-reviewer** - Code quality, Laravel best practices, and PR reviews
+- **laravel-architecture-reviewer** - Architecture evaluation and design validation
 
 **Debugging & Performance:**
-- **[laravel-debugger](/.claude/agents/laravel-debugger.md)** - Systematic debugging and issue diagnosis
-- **[laravel-performance-optimizer](/.claude/agents/laravel-performance-optimizer.md)** - Performance optimization, caching, and scaling
+- **laravel-debugger** - Systematic debugging and issue diagnosis
+- **laravel-performance-optimizer** - Performance optimization, caching, and scaling
 
 **Security & Documentation:**
-- **[laravel-security-auditor](/.claude/agents/laravel-security-auditor.md)** - Security best practices and vulnerability detection
-- **[laravel-documentation-engineer](/.claude/agents/laravel-documentation-engineer.md)** - API documentation and technical guides
+- **laravel-security-auditor** - Security best practices and vulnerability detection
+- **laravel-documentation-engineer** - API documentation and technical guides
 
-### 🎯 Skills (`.claude/skills/`)
-
-Reusable workflows and best practices:
+### 5 Laravel Development Skills
 
 **Development Workflows:**
-- **[laravel-tdd](/.claude/skills/laravel-tdd/)** - Test-driven development for Laravel with Pest PHP
-- **[brainstorming](/.claude/skills/brainstorming/)** - Collaborative feature design and planning for Laravel
-- **[systematic-debugging](/.claude/skills/systematic-debugging/)** - Systematic debugging process for Laravel applications
+- **laravel-tdd** - Test-driven development for Laravel with Pest PHP
+- **brainstorming** - Collaborative feature design and planning for Laravel
+- **systematic-debugging** - Systematic debugging process for Laravel applications
 
 **Best Practices:**
-- **[eloquent-best-practices](/.claude/skills/eloquent-best-practices/)** - Eloquent ORM patterns and optimization
-- **[api-resource-patterns](/.claude/skills/api-resource-patterns/)** - API resource and collection best practices
+- **eloquent-best-practices** - Eloquent ORM patterns and optimization
+- **api-resource-patterns** - API resource and collection best practices
 
-## 🚀 Quick Start
+## Requirements
 
-### Installation
+- PHP 8.1 or higher
+- Laravel 10.0 or 11.0
+- Claude Code
 
-1. **Clone or download this repository:**
-   ```bash
-   git clone https://github.com/iSerter/laravel-claude-agents.git
-   ```
+## Installation
 
-2. **Copy subagents to your Laravel project:**
-   ```bash
-   # For project-specific agents
-   cp -r .claude/agents /path/to/your/laravel-project/.claude/
+Install the package via Composer:
 
-   # For global agents (all projects)
-   cp -r .claude/agents ~/.claude/
-   ```
+```bash
+composer require iserter/laravel-claude-agents
+```
 
-3. **Copy skills to your project or global directory:**
-   ```bash
-   # For project-specific skills
-   cp -r .claude/skills /path/to/your/laravel-project/.claude/
+## Usage
 
-   # For global skills
-   cp -r .claude/skills ~/.claude/
-   ```
+Publish the Claude AI agents and skills to your project root:
 
-### Usage with Claude Code
+```bash
+php artisan claude-agents:publish
+```
 
-Once installed, Claude Code automatically detects and loads the subagents. You can:
+This will create a `.claude` directory in your project root containing all agents and skills.
+
+### Overwriting Existing Files
+
+If you need to update or overwrite existing files:
+
+```bash
+php artisan claude-agents:publish --force
+```
+
+## What Gets Published
+
+After running the publish command, you'll have:
+
+```
+your-project/
+├── .claude/
+│   ├── agents/
+│   │   ├── laravel-debugger.md
+│   │   ├── laravel-architect.md
+│   │   ├── laravel-code-reviewer.md
+│   │   ├── eloquent-specialist.md
+│   │   ├── laravel-documentation-engineer.md
+│   │   ├── laravel-api-developer.md
+│   │   ├── laravel-security-auditor.md
+│   │   ├── laravel-performance-optimizer.md
+│   │   ├── laravel-testing-expert.md
+│   │   └── laravel-architecture-reviewer.md
+│   └── skills/
+│       ├── systematic-debugging/
+│       ├── eloquent-best-practices/
+│       ├── api-resource-patterns/
+│       ├── laravel-tdd/
+│       └── brainstorming/
+```
+
+## Using with Claude Code
+
+Once published, Claude Code automatically detects and loads the subagents. You can:
 
 **Invoke them explicitly:**
 ```
@@ -88,7 +115,7 @@ Once installed, Claude Code automatically detects and loads the subagents. You c
 (Claude will automatically use eloquent-specialist and laravel-performance-optimizer)
 ```
 
-## 🤖 Subagent Details
+## Subagent Details
 
 ### Laravel Architect
 **When to invoke:** Application design, architecture decisions, design patterns
@@ -170,7 +197,7 @@ Once installed, Claude Code automatically detects and loads the subagents. You c
 - Documents Laravel configurations
 - Maintains changelog and migration guides
 
-## 🎯 Skills Details
+## Skills Details
 
 ### Laravel TDD
 Test-driven development workflow specifically for Laravel applications using Pest PHP.
@@ -222,7 +249,7 @@ Best practices for Laravel API resource transformation.
 - Resource collections with pagination
 - HATEOAS links
 
-## 📖 Understanding Subagents vs Skills
+## Understanding Subagents vs Skills
 
 ### Subagents
 - **What:** Specialized AI assistants with specific expertise
@@ -236,41 +263,7 @@ Best practices for Laravel API resource transformation.
 - **How:** Markdown documentation with examples and checklists
 - **Invoke:** Reference in prompts or let Claude apply automatically
 
-## 🛠️ Customization
-
-### Modifying Subagents
-
-Each subagent is a Markdown file with YAML frontmatter:
-
-```yaml
----
-name: your-agent-name
-description: When this agent should be invoked
-tools: Read, Write, Edit, Bash, Glob, Grep
----
-
-Your agent's system prompt and instructions...
-```
-
-Edit the files in `.claude/agents/` to customize behavior, add tools, or adjust expertise areas.
-
-### Creating New Subagents
-
-1. Create a new `.md` file in `.claude/agents/`
-2. Add YAML frontmatter with name, description, and tools
-3. Write detailed instructions and expertise areas
-4. Include examples and best practices
-5. Define integration points with other agents
-
-### Adding Skills
-
-1. Create a new directory in `.claude/skills/`
-2. Add a `SKILL.md` file with YAML frontmatter
-3. Document the workflow or pattern
-4. Include code examples and checklists
-5. Add any supporting files or documentation
-
-## 🤝 Integration
+## Integration
 
 These subagents work together seamlessly:
 
@@ -283,7 +276,7 @@ These subagents work together seamlessly:
 
 Each agent knows when to collaborate with others for best results.
 
-## 📋 Best Practices
+## Best Practices
 
 1. **Start with Architecture:** Use `laravel-architect` for new features to plan before coding
 2. **Test First:** Apply `laravel-tdd` skill and use `laravel-testing-expert` for TDD
@@ -292,25 +285,11 @@ Each agent knows when to collaborate with others for best results.
 5. **Document APIs:** Let `laravel-api-developer` create well-documented API endpoints
 6. **Monitor Performance:** Engage `laravel-performance-optimizer` for bottlenecks
 
-## 🔧 Requirements
+## License
 
-- Claude Code (latest version recommended)
-- Laravel 10+ projects (agents optimized for modern Laravel)
-- PHP 8.2+ (for full feature support)
-- Pest PHP (recommended for testing)
+MIT License
 
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details
-
-## 🙏 Acknowledgments
-
-Inspired by:
-- [Claude Code Documentation](https://code.claude.com/docs/en/sub-agents)
-- [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents)
-- [obra/superpowers](https://github.com/obra/superpowers)
-
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Feel free to:
 - Add new Laravel-specific subagents
@@ -319,7 +298,7 @@ Contributions are welcome! Feel free to:
 - Share usage examples
 - Report issues
 
-## 📞 Support
+## Support
 
 For issues, questions, or suggestions:
 - Open an issue on GitHub
