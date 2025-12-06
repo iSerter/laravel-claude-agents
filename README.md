@@ -61,13 +61,21 @@ php artisan claude-agents:publish
 
 This will create a `.claude` directory in your project root containing all agents and skills.
 
-### Overwriting Existing Files
+### Merging with Existing Files
 
-If you need to update or overwrite existing files:
+If a `.claude` directory already exists in your project:
 
-```bash
-php artisan claude-agents:publish --force
-```
+- **Without `--force`**: New files from the package will be added, but existing files will be preserved (not overwritten). This allows you to keep your custom modifications.
+  
+  ```bash
+  php artisan claude-agents:publish
+  ```
+
+- **With `--force`**: New files will be added and existing files will be updated to match the package versions, while your custom agent/skill files remain untouched.
+
+  ```bash
+  php artisan claude-agents:publish --force
+  ```
 
 ## What Gets Published
 
