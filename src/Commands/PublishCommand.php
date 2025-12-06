@@ -9,7 +9,7 @@ class PublishCommand extends Command
 {
     protected $signature = 'claude-agents:publish {--force : Overwrite existing files}';
 
-    protected $description = 'Publish Claude AI agents and skills to the project root';
+    protected $description = 'Publish Claude AI agents and skills to the project root (merges with existing .claude directory)';
 
     public function handle(): int
     {
@@ -57,7 +57,7 @@ class PublishCommand extends Command
 
         foreach ($items as $item) {
             $relativePath = $item->getRelativePathname();
-            $destinationPath = $destination . '/' . $relativePath;
+            $destinationPath = $destination . DIRECTORY_SEPARATOR . $relativePath;
             $destinationDir = dirname($destinationPath);
 
             // Create subdirectories if they don't exist
