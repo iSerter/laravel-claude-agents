@@ -1,5 +1,5 @@
 ---
-name: systematic-debugging-laravel
+name: laravel-systematic-debugging
 description: Systematic debugging process for Laravel applications - ensures root cause investigation before attempting fixes. Use for any Laravel issue (test failures, bugs, unexpected behavior, performance problems).
 ---
 

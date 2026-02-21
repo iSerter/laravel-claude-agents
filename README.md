@@ -96,11 +96,11 @@ your-project/
 │   │   ├── laravel-testing-expert.md
 │   │   └── laravel-architecture-reviewer.md
 │   └── skills/
-│       ├── systematic-debugging/
+│       ├── laravel-systematic-debugging/
 │       ├── eloquent-best-practices/
-│       ├── api-resource-patterns/
+│       ├── laravel-api-resource-patterns/
 │       ├── laravel-tdd/
-│       └── brainstorming/
+│       └── laravel-brainstorming/
 ```
 
 ## Using with Claude Code
