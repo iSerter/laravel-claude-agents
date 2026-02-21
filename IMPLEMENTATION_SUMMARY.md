@@ -85,13 +85,13 @@ Successfully created a comprehensive collection of Claude Code subagents and ski
    - Red-Green-Refactor cycle
    - Laravel-specific test patterns
 
-2. **brainstorming** (7.8 KB)
+2. **laravel-brainstorming** (7.8 KB)
    - Feature design and planning for Laravel
    - Collaborative questioning approach
    - Laravel pattern exploration
    - Incremental validation
 
-3. **systematic-debugging** (11 KB)
+3. **laravel-systematic-debugging** (11 KB)
    - Four-phase debugging process
    - Laravel-specific debugging techniques
    - Root cause investigation
@@ -104,7 +104,7 @@ Successfully created a comprehensive collection of Claude Code subagents and ski
    - Relationship management
    - Query performance patterns
 
-5. **api-resource-patterns** (6.2 KB)
+5. **laravel-api-resource-patterns** (6.2 KB)
    - API resource transformation
    - Conditional attributes
    - Collection handling with pagination
@@ -189,15 +189,15 @@ laravel-claude-agents/
 │   │   ├── laravel-security-auditor.md
 │   │   └── laravel-testing-expert.md
 │   └── skills/
-│       ├── api-resource-patterns/
+│       ├── laravel-api-resource-patterns/
 │       │   └── SKILL.md
-│       ├── brainstorming/
+│       ├── laravel-brainstorming/
 │       │   └── SKILL.md
 │       ├── eloquent-best-practices/
 │       │   └── SKILL.md
 │       ├── laravel-tdd/
 │       │   └── SKILL.md
-│       └── systematic-debugging/
+│       └── laravel-systematic-debugging/
 │           └── SKILL.md
 ├── CONTRIBUTING.md
 ├── EXAMPLES.md
