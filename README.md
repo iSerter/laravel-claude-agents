@@ -45,11 +45,13 @@ A comprehensive collection of specialized Claude Code subagents and skills desig
 
 ## Installation
 
-Install the package via Composer:
+Install the package as a dev dependency via Composer:
 
 ```bash
-composer require iserter/laravel-claude-agents
+composer require --dev iserter/laravel-claude-agents:dev-main
 ```
+
+> **Note:** Since this package has no stable release yet, you must specify the `dev-main` version constraint. The `--dev` flag is recommended as this package is only needed during development.
 
 ## Usage
 
