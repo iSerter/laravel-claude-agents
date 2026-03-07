@@ -49,49 +49,47 @@ A comprehensive collection of specialized Claude Code subagents and skills desig
 
 ## Requirements
 
-- PHP 8.1 or higher
-- Laravel 10, 11, or 12
 - Claude Code
+- For Composer install: PHP 8.1+, Laravel 10/11/12
 
 ## Installation
 
-Install the package as a dev dependency via Composer:
+### Option 1: Claude Plugin (Recommended)
+
+Install directly as a Claude Code plugin:
+
+```bash
+# Add the marketplace
+/plugin marketplace add iserter/laravel-claude-agents
+
+# Install the plugin
+/plugin install laravel-claude-agents
+```
+
+Or install directly from GitHub:
+
+```bash
+/plugin install --source github iserter/laravel-claude-agents
+```
+
+### Option 2: Composer Package
+
+Install as a Laravel dev dependency and publish to your project:
 
 ```bash
 composer require --dev iserter/laravel-claude-agents:dev-main
-```
-
-> **Note:** Since this package has no stable release yet, you must specify the `dev-main` version constraint. The `--dev` flag is recommended as this package is only needed during development.
-
-## Usage
-
-Publish the Claude AI agents and skills to your project root:
-
-```bash
 php artisan claude-agents:publish
 ```
 
-This will create a `.claude` directory in your project root containing all agents and skills.
+This creates a `.claude` directory in your project root with all agents and skills.
 
-### Merging with Existing Files
+> **Note:** With `--force`, existing files are updated to match package versions. Without it, existing files are preserved.
 
-If a `.claude` directory already exists in your project:
+## What Gets Installed
 
-- **Without `--force`**: New files from the package will be added, but existing files will be preserved (not overwritten). This allows you to keep your custom modifications.
-  
-  ```bash
-  php artisan claude-agents:publish
-  ```
+**Via plugin:** Claude Code loads agents and skills directly from the plugin — no files added to your project.
 
-- **With `--force`**: New files will be added and existing files will be updated to match the package versions, while your custom agent/skill files remain untouched.
-
-  ```bash
-  php artisan claude-agents:publish --force
-  ```
-
-## What Gets Published
-
-After running the publish command, you'll have:
+**Via Composer publish:** Creates a `.claude` directory in your project:
 
 ```
 your-project/

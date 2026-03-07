@@ -1,0 +1,30 @@
+{
+  "name": "laravel-claude-agents",
+  "owner": {
+    "name": "iSerter"
+  },
+  "metadata": {
+    "description": "Specialized Claude Code subagents and skills for Laravel development",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "laravel-claude-agents",
+      "source": "./",
+      "description": "10 specialized subagents and 15 skills for Laravel development — architecture, Eloquent, API, testing, security, performance, debugging, validation, queues, caching, and more.",
+      "version": "0.1.0",
+      "author": {
+        "name": "iSerter"
+      },
+      "keywords": [
+        "laravel",
+        "php",
+        "eloquent",
+        "api",
+        "testing",
+        "security",
+        "performance"
+      ]
+    }
+  ]
+}

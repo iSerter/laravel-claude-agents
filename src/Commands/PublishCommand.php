@@ -13,22 +13,29 @@ class PublishCommand extends Command
 
     public function handle(): int
     {
-        $source = __DIR__ . '/../../.claude';
+        $packageRoot = realpath(__DIR__ . '/../..');
         $destination = base_path('.claude');
 
-        if (File::exists($destination)) {
-            $this->warn('The .claude directory already exists. Merging files...');
-            $this->mergeDirectories($source, $destination);
-        } else {
-            File::copyDirectory($source, $destination);
+        if (!File::isDirectory($destination)) {
+            File::makeDirectory($destination, 0755, true);
             $this->info('The .claude directory has been created in your project root.');
+        } else {
+            $this->warn('The .claude directory already exists. Merging files...');
         }
+
+        $this->mergeDirectories($packageRoot . '/agents', $destination . '/agents');
+        $this->mergeDirectories($packageRoot . '/skills', $destination . '/skills');
 
         $this->info('Claude AI agents and skills published successfully!');
         $this->newLine();
         $this->info('Published:');
         $this->line('  - 10 Laravel-specific agents');
-        $this->line('  - 5 Laravel development skills');
+        $this->line('  - 15 Laravel development skills');
+
+        if (!$this->option('force')) {
+            $this->newLine();
+            $this->info('Use --force to overwrite existing files.');
+        }
 
         return self::SUCCESS;
     }
@@ -77,9 +84,5 @@ class PublishCommand extends Command
             }
         }
 
-        if (!$force) {
-            $this->newLine();
-            $this->info('Use --force to overwrite existing files.');
-        }
     }
 }
