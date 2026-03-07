@@ -80,13 +80,13 @@ Located in `.claude/skills/`:
    - Red-Green-Refactor cycle
    - Laravel-specific test patterns
 
-2. **brainstorming/** - 7.8 KB
+2. **laravel-brainstorming/** - 7.8 KB
    - Feature design and planning for Laravel
    - Collaborative questioning approach
    - Laravel pattern exploration
    - Incremental validation
 
-3. **systematic-debugging/** - 11 KB
+3. **laravel-systematic-debugging/** - 11 KB
    - Four-phase debugging process
    - Laravel-specific debugging techniques
    - Root cause investigation
@@ -169,10 +169,10 @@ Located in `.claude/skills/`:
 ## Skills Coverage
 
 ### By Category
-- **Development Methodology:** 2 skills (laravel-tdd, brainstorming)
-- **Debugging Process:** 1 skill (systematic-debugging)
+- **Development Methodology:** 2 skills (laravel-tdd, laravel-brainstorming)
+- **Debugging Process:** 1 skill (laravel-systematic-debugging)
 - **ORM Best Practices:** 1 skill (eloquent-best-practices)
-- **API Patterns:** 1 skill (api-resource-patterns)
+- **API Patterns:** 1 skill (laravel-api-resource-patterns)
 
 ## Content Quality Metrics
 

@@ -224,7 +224,7 @@ You need to transform Eloquent models to API responses with proper formatting.
 
 **1. Apply the Skill**
 ```
-> Use api-resource-patterns skill to create post API resources
+> Use laravel-api-resource-patterns skill to create post API resources
 ```
 
 **2. Create Resource**

@@ -1,5 +1,5 @@
 ---
-name: api-resource-patterns
+name: laravel-api-resource-patterns
 description: Best practices for Laravel API Resources including resource transformation, collection handling, conditional attributes, and relationship loading.
 ---
 

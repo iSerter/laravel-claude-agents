@@ -30,12 +30,12 @@ A comprehensive collection of specialized Claude Code subagents and skills desig
 
 **Development Workflows:**
 - **laravel-tdd** - Test-driven development for Laravel with Pest PHP
-- **brainstorming** - Collaborative feature design and planning for Laravel
-- **systematic-debugging** - Systematic debugging process for Laravel applications
+- **laravel-brainstorming** - Collaborative feature design and planning for Laravel
+- **laravel-systematic-debugging** - Systematic debugging process for Laravel applications
 
 **Best Practices:**
 - **eloquent-best-practices** - Eloquent ORM patterns and optimization
-- **api-resource-patterns** - API resource and collection best practices
+- **laravel-api-resource-patterns** - API resource and collection best practices
 
 ## Requirements
 
@@ -98,11 +98,11 @@ your-project/
 │   │   ├── laravel-testing-expert.md
 │   │   └── laravel-architecture-reviewer.md
 │   └── skills/
-│       ├── systematic-debugging/
+│       ├── laravel-systematic-debugging/
 │       ├── eloquent-best-practices/
-│       ├── api-resource-patterns/
+│       ├── laravel-api-resource-patterns/
 │       ├── laravel-tdd/
-│       └── brainstorming/
+│       └── laravel-brainstorming/
 ```
 
 ## Using with Claude Code
