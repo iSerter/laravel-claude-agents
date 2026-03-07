@@ -1,0 +1,19 @@
+# Release Please: automated releases from conventional commits.
+# See https://github.com/googleapis/release-please-action
+# Merging the release PR it opens will bump version in composer.json, update CHANGELOG.md, and create the GitHub release/tag.
+name: release-please
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          release-type: php

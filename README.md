@@ -26,7 +26,7 @@ A comprehensive collection of specialized Claude Code subagents and skills desig
 - **laravel-security-auditor** - Security best practices and vulnerability detection
 - **laravel-documentation-engineer** - API documentation and technical guides
 
-### 5 Laravel Development Skills
+### 15 Laravel Development Skills
 
 **Development Workflows:**
 - **laravel-tdd** - Test-driven development for Laravel with Pest PHP
@@ -36,11 +36,21 @@ A comprehensive collection of specialized Claude Code subagents and skills desig
 **Best Practices:**
 - **eloquent-best-practices** - Eloquent ORM patterns and optimization
 - **laravel-api-resource-patterns** - API resource and collection best practices
+- **laravel-validation-patterns** - Form Requests, custom rules, and conditional validation
+- **laravel-authorization-patterns** - Gates, Policies, and middleware access control
+- **laravel-queue-patterns** - Job structure, batching, chaining, and retry strategies
+- **laravel-event-driven-architecture** - Events, listeners, subscribers, and model observers
+- **laravel-caching-strategies** - Cache patterns, tags, locks, and invalidation
+- **laravel-notification-patterns** - Multi-channel notifications and queueing
+- **laravel-middleware-patterns** - Custom middleware, groups, and parameters
+- **laravel-blade-component-patterns** - Components, slots, attributes, and reusable UI
+- **laravel-task-scheduling** - Scheduled commands, constraints, and monitoring
+- **laravel-feature-flags** - Pennant feature flags, A/B testing, and gradual rollouts
 
 ## Requirements
 
 - PHP 8.1 or higher
-- Laravel 10.0 or 11.0
+- Laravel 10, 11, or 12
 - Claude Code
 
 ## Installation
@@ -102,7 +112,17 @@ your-project/
 │       ├── eloquent-best-practices/
 │       ├── laravel-api-resource-patterns/
 │       ├── laravel-tdd/
-│       └── laravel-brainstorming/
+│       ├── laravel-brainstorming/
+│       ├── laravel-validation-patterns/
+│       ├── laravel-authorization-patterns/
+│       ├── laravel-queue-patterns/
+│       ├── laravel-event-driven-architecture/
+│       ├── laravel-caching-strategies/
+│       ├── laravel-notification-patterns/
+│       ├── laravel-middleware-patterns/
+│       ├── laravel-blade-component-patterns/
+│       ├── laravel-task-scheduling/
+│       └── laravel-feature-flags/
 ```
 
 ## Using with Claude Code
@@ -127,137 +147,38 @@ Once published, Claude Code automatically detects and loads the subagents. You c
 
 ## Subagent Details
 
-### Laravel Architect
-**When to invoke:** Application design, architecture decisions, design patterns
-- Designs scalable application architecture
-- Selects appropriate design patterns
-- Plans database schema and relationships
-- Defines API contracts and boundaries
-- Establishes testing strategies
-
-### Eloquent Specialist
-**When to invoke:** Database design, models, relationships, query optimization
-- Creates efficient Eloquent models
-- Defines complex relationships
-- Prevents N+1 query problems
-- Optimizes database queries
-- Designs indexes and migrations
-
-### Laravel API Developer
-**When to invoke:** RESTful API creation, API resources, authentication
-- Designs RESTful endpoints
-- Creates API resources and collections
-- Implements Sanctum/Passport authentication
-- Configures rate limiting
-- Documents API endpoints
-
-### Laravel Testing Expert
-**When to invoke:** Test creation, TDD implementation, test strategy
-- Writes comprehensive feature tests
-- Creates unit tests for business logic
-- Implements test-driven development
-- Tests APIs and authentication
-- Achieves high code coverage
-
-### Laravel Code Reviewer
-**When to invoke:** Code reviews, pull requests, quality assurance
-- Reviews code quality and Laravel conventions
-- Identifies security vulnerabilities
-- Checks performance issues
-- Validates best practices
-- Provides actionable feedback
-
-### Laravel Architecture Reviewer
-**When to invoke:** Architecture evaluation, design validation, technical debt
-- Evaluates system design decisions
-- Assesses scalability architecture
-- Reviews design pattern usage
-- Identifies architectural technical debt
-- Validates Laravel ecosystem integration
-
-### Laravel Debugger
-**When to invoke:** Debugging issues, error analysis, root cause identification
-- Diagnoses Laravel-specific problems
-- Analyzes error logs and stack traces
-- Debugs Eloquent queries and relationships
-- Identifies performance bottlenecks
-- Resolves package conflicts
-
-### Laravel Performance Optimizer
-**When to invoke:** Performance issues, optimization, scaling
-- Identifies performance bottlenecks
-- Optimizes database queries
-- Implements caching strategies
-- Configures queue systems
-- Sets up Laravel Octane
-
-### Laravel Security Auditor
-**When to invoke:** Security reviews, vulnerability detection
-- Audits code for OWASP Top 10 vulnerabilities
-- Reviews authentication and authorization
-- Checks input validation and sanitization
-- Verifies CSRF and XSS protection
-- Ensures secure file uploads
-
-### Laravel Documentation Engineer
-**When to invoke:** Documentation creation, API docs, technical guides
-- Creates comprehensive project documentation
-- Documents API endpoints with examples
-- Writes setup and deployment guides
-- Documents Laravel configurations
-- Maintains changelog and migration guides
+| Agent | When to Invoke | Key Capabilities |
+|-------|---------------|------------------|
+| **laravel-architect** | Architecture decisions, design patterns | Scalable architecture, design patterns, schema planning, API contracts |
+| **eloquent-specialist** | Database design, models, query optimization | Eloquent models, relationships, N+1 prevention, indexes, migrations |
+| **laravel-api-developer** | RESTful API creation, authentication | API resources, Sanctum/Passport, rate limiting, endpoint documentation |
+| **laravel-testing-expert** | Test creation, TDD, test strategy | Feature/unit tests, Pest PHP, API testing, code coverage |
+| **laravel-code-reviewer** | Code reviews, pull requests, QA | Code quality, security checks, performance issues, best practices |
+| **laravel-architecture-reviewer** | Architecture evaluation, technical debt | Design validation, scalability assessment, pattern review |
+| **laravel-debugger** | Debugging, error analysis, root cause | Laravel diagnostics, log analysis, query debugging, package conflicts |
+| **laravel-performance-optimizer** | Performance issues, optimization, scaling | Bottleneck identification, caching, queues, Octane setup |
+| **laravel-security-auditor** | Security reviews, vulnerability detection | OWASP Top 10, auth review, input validation, CSRF/XSS protection |
+| **laravel-documentation-engineer** | Documentation, API docs, technical guides | Project docs, API examples, setup/deployment guides, changelogs |
 
 ## Skills Details
 
-### Laravel TDD
-Test-driven development workflow specifically for Laravel applications using Pest PHP.
-
-**Key Features:**
-- Red-Green-Refactor cycle for Laravel
-- Feature test patterns
-- Database testing with factories
-- API testing examples
-- Authorization and validation testing
-
-### Brainstorming Laravel
-Collaborative feature design and planning specifically for Laravel applications.
-
-**Key Features:**
-- Laravel-specific design questions
-- Multiple approach exploration
-- Incremental validation
-- Database schema design
-- API and service design patterns
-
-### Systematic Debugging Laravel
-Systematic debugging process tailored for Laravel applications.
-
-**Key Features:**
-- Four-phase debugging process
-- Laravel-specific debug techniques
-- Eloquent and route debugging
-- Queue and event debugging
-- Root cause identification
-
-### Eloquent Best Practices
-Patterns and practices for efficient Eloquent ORM usage.
-
-**Key Topics:**
-- Query optimization techniques
-- Relationship management
-- N+1 query prevention
-- Mass assignment protection
-- Model events and observers
-
-### API Resource Patterns
-Best practices for Laravel API resource transformation.
-
-**Key Topics:**
-- Resource structure and organization
-- Conditional attributes
-- Nested relationships
-- Resource collections with pagination
-- HATEOAS links
+| Skill | Description |
+|-------|-------------|
+| **laravel-tdd** | Red-Green-Refactor cycle with Pest PHP, feature/unit tests, database testing with factories |
+| **laravel-brainstorming** | Collaborative feature design, multiple approach exploration, schema and API design |
+| **laravel-systematic-debugging** | Four-phase debugging process, Eloquent/route/queue/event debugging, root cause identification |
+| **eloquent-best-practices** | Query optimization, N+1 prevention, relationships, mass assignment, model events |
+| **laravel-api-resource-patterns** | Resource transformation, conditional attributes, collections with pagination, HATEOAS links |
+| **laravel-validation-patterns** | Form Requests, custom Rule objects, conditional/array/database validation, input sanitization |
+| **laravel-authorization-patterns** | Gates, Policies, middleware auth, Blade directives, Response objects, testing access control |
+| **laravel-queue-patterns** | Job structure, batching, chaining, middleware (RateLimited, WithoutOverlapping), retry strategies |
+| **laravel-event-driven-architecture** | Events/listeners, auto-discovery, queued listeners, subscribers, model observers, transaction safety |
+| **laravel-caching-strategies** | remember/flexible patterns, cache tags, atomic locks, memoization, invalidation strategies |
+| **laravel-notification-patterns** | Mail/database/broadcast/Slack channels, markdown templates, queueing, on-demand recipients |
+| **laravel-middleware-patterns** | Before/after/terminable patterns, groups, parameters, aliases, common implementations |
+| **laravel-blade-component-patterns** | Class-based/anonymous components, slots, $attributes bag, stacks, view fragments |
+| **laravel-task-scheduling** | Schedule definitions, frequency constraints, overlap prevention, onOneServer, monitoring hooks |
+| **laravel-feature-flags** | Pennant feature flags, scoping, rich values for A/B testing, Blade directives, gradual rollouts |
 
 ## Understanding Subagents vs Skills
 
