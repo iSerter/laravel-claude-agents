@@ -17,7 +17,7 @@ We welcome:
 
 ### Subagent Structure
 
-Each subagent should be a Markdown file in `.claude/agents/` with this structure:
+Each subagent should be a Markdown file in `agents/` (project root) with this structure:
 
 ```markdown
 ---
@@ -89,7 +89,7 @@ Choose appropriate tools based on agent role:
 
 ### Skill Structure
 
-Each skill should be in `.claude/skills/skill-name/SKILL.md`:
+Each skill should be in `skills/skill-name/SKILL.md` (project root):
 
 ```markdown
 ---
@@ -163,20 +163,20 @@ git checkout -b skill/your-skill-name
 **For Subagents:**
 ```bash
 # Create the agent file
-touch .claude/agents/your-agent-name.md
+touch agents/your-agent-name.md
 
 # Edit with your favorite editor
-vim .claude/agents/your-agent-name.md
+vim agents/your-agent-name.md
 ```
 
 **For Skills:**
 ```bash
 # Create the skill directory and file
-mkdir -p .claude/skills/your-skill-name
-touch .claude/skills/your-skill-name/SKILL.md
+mkdir -p skills/your-skill-name
+touch skills/your-skill-name/SKILL.md
 
 # Edit the skill
-vim .claude/skills/your-skill-name/SKILL.md
+vim skills/your-skill-name/SKILL.md
 ```
 
 ### 4. Test Your Changes
@@ -184,7 +184,7 @@ vim .claude/skills/your-skill-name/SKILL.md
 **Test in a Laravel Project:**
 ```bash
 # Copy to a test Laravel project
-cp -r .claude/agents ~/.claude/agents-test
+cp -r agents ~/.claude/agents-test
 cd /path/to/test-laravel-project
 
 # Try using your agent or skill
@@ -194,9 +194,9 @@ cd /path/to/test-laravel-project
 **Verify Markdown Syntax:**
 ```bash
 # Check for markdown issues
-mdl .claude/agents/your-agent-name.md
+mdl agents/your-agent-name.md
 # or
-mdl .claude/skills/your-skill-name/SKILL.md
+mdl skills/your-skill-name/SKILL.md
 ```
 
 ### 5. Update Documentation
