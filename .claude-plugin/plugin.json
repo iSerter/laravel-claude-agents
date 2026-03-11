@@ -28,7 +28,5 @@
     "blade",
     "scheduling",
     "feature-flags"
-  ],
-  "agents": "./agents/",
-  "skills": "./skills/"
+  ]
 }
